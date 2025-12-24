@@ -58,7 +58,8 @@ huggingface-cli download \
   --local-dir-use-symlinks False
 ```
 This will save the model here:
-```models/phi-3-mini-4k-instruct-q4.gguf
+```text
+models/phi-3-mini-4k-instruct-q4.gguf
 ```
 4. Now downlaod the embedding model for offline
 ```
@@ -108,11 +109,16 @@ Run container
 docker run -d -p 8000:8000 --name agentic-chatbot agentic-chatbot
 ```
 
-🤝 Contributing
-\n Fork the Project
-\n Create your Feature Branch (git checkout -b feature/AmazingFeature)
-\n Commit your Changes (git commit -m 'Add some AmazingFeature')
-\n Push to the Branch (git push origin feature/AmazingFeature)
-\n Open a Pull Request
+## 🤝 Contributing
 
-\n Developed with ❤️ by Mohammad Seraj
+1. Fork the Project  
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)  
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)  
+4. Push to the Branch (`git push origin feature/AmazingFeature`)  
+5. Open a Pull Request  
+
+---
+
+Developed with ❤️ by [Mohammad Seraj](https://www.linkedin.com/in/ansariserajmd/)
+
+
