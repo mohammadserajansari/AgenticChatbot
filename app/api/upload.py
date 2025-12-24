@@ -1,35 +1,3 @@
-# # from fastapi import APIRouter, UploadFile, File
-# # from typing import List
-# # from app.graph.pipeline import LangGraphPipeline
-
-# # router = APIRouter(prefix="/upload", tags=["Upload"])
-# # pipeline = LangGraphPipeline()
-
-# # @router.post("/")
-# # async def upload_files(files: List[UploadFile] = File(...)):
-# #     result = await pipeline.upload_files(files)
-# #     return result
-
-
-# ################
-
-# from fastapi import APIRouter, UploadFile, BackgroundTasks
-# from app.graph.pipeline import LangGraphPipeline
-# from app.utils.file import save_file
-
-# router = APIRouter(prefix="/upload", tags=["Upload"])
-# pipeline = LangGraphPipeline()
-
-# @router.post("/")
-# async def upload_file(file: UploadFile, background_tasks: BackgroundTasks):
-#     content = await file.read()
-#     file_path = save_file(content, file.filename)
-#     background_tasks.add_task(pipeline.upload_file, file_path)
-#     return {"status": "processing", "file": file.filename}
-
-
-############
-
 from fastapi import APIRouter, UploadFile, BackgroundTasks
 from pathlib import Path
 import shutil

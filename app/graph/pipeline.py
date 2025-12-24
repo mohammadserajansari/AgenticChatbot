@@ -1,24 +1,3 @@
-# from asyncio import create_task
-# from typing import List
-# from app.graph.nodes import UploadNode, QueryNode
-# from app.utils.file import save_upload_file
-
-# class LangGraphPipeline:
-#     """Full automated pipeline: upload -> ingest -> query"""
-
-#     async def upload_files(self, files: List):
-#         paths = []
-#         for file in files:
-#             file_path = save_upload_file(file)
-#             paths.append(file_path)
-#             create_task(UploadNode().run(file_path))  # async background ingestion
-#         return {"status": "uploaded", "files": paths}
-
-#     async def query(self, query: str):
-#         result = await QueryNode().run(query)
-#         return result
-
-################
 from app.graph.nodes import UploadNode, QueryNode
 
 class LangGraphPipeline:

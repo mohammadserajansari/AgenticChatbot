@@ -1,21 +1,3 @@
-# ##############
-# from fastapi import APIRouter
-# from pydantic import BaseModel
-# from app.graph.pipeline import LangGraphPipeline
-
-# router = APIRouter(prefix="/chat", tags=["Chat"])
-# pipeline = LangGraphPipeline()
-
-# class ChatRequest(BaseModel):
-#     message: str
-
-# @router.post("/")
-# async def chat(req: ChatRequest):
-#     response = await pipeline.query(req.message)
-#     return {"mode": "rag" if response else "llm", "response": response}
-
-
-###########
 # app/api/chat.py
 from fastapi import APIRouter
 from fastapi.responses import StreamingResponse
