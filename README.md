@@ -61,8 +61,8 @@ This will save the model here:
 ```text
 models/phi-3-mini-4k-instruct-q4.gguf
 ```
-4. Now downlaod the embedding model for offline
-```
+4. Next, download the embedding model to use it offline.
+```text
 sentence-transformers/all-MiniLM-L6-v2
 ```
 5. Upgrade pip and install dependencies
