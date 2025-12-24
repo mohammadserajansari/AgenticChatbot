@@ -37,70 +37,70 @@ AgenticChatbot/
 
 ## 🛠️ Setup & Run
 
-## 1. Clone the repository
+1. Clone the repository
 ```
 git clone https://github.com/mohammadserajansari/AgenticChatbot.git
 cd AgenticChatbot
 
 ```
-## 2. Create and activate Conda environment
+2. Create and activate Conda environment
 ```bash
 conda create -n aiagent python=3.12 -y
 conda activate aiagent
-```bash
-## 3. Upgrade pip and install dependencies
+```
+
+3. Upgrade pip and install dependencies
 ```python
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## 4. Download LLaMA model (example: Llama-3-8B GGUF)
-## Place your downloaded .gguf file in the 'models/' directory
-## Example:
+4. Download LLaMA model (example: Llama-3-8B GGUF)
+Place your downloaded .gguf file in the 'models/' directory
+Example:
  ```bash
  wget https://huggingface.co/path-to-your-llama-3-8b.gguf -P models/
  ```
 
-## 5. Add your documents for RAG in 'data/' folder
-## PDF, TXT, or Markdown files will be indexed automatically
+5. Add your documents for RAG in 'data/' folder
+PDF, TXT, or Markdown files will be indexed automatically
 
-## 6. Run FastAPI server
+6. Run FastAPI server
 
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
-
-## 7. Access API docs in your browser
+7. Access API docs in your browser
 ```bash
 http://127.0.0.1:8000/docs
 ```
-# 🔌 API Reference
-# Chat (RAG-enabled)
-# POST /chat/
-# JSON Example:
+🔌 API Reference
+Chat (RAG-enabled)
+POST /chat/
+JSON Example:
 ```json
 {
   "message": "What are the core components of this system?"
 }
 ```
-## Returns real-time streaming response from the local LLM using retrieved context.
+Returns real-time streaming response from the local LLM using retrieved context.
 
-## Document Upload
-## POST /upload/
-## Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
+Document Upload
+POST /upload/
+Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
 
-## 🐳 Docker Deployment (Optional)
-## Build Docker image
+🐳 Docker Deployment
+Build Docker image
 ```bash
 docker build -t agentic-chatbot .
 ```
 
-## Run container
+Run container
 ```bash
 docker run -d -p 8000:8000 --name agentic-chatbot agentic-chatbot
 ```
 
-## 🤝 Contributing
+🤝 Contributing
 Fork the Project
 Create your Feature Branch (git checkout -b feature/AmazingFeature)
 Commit your Changes (git commit -m 'Add some AmazingFeature')
