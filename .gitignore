@@ -51,8 +51,8 @@ data/
 # Docker
 # -------------------------
 *.dockerignore
-Dockerfile*
-docker-compose*.yml
+# Dockerfile*
+# docker-compose*.yml
 
 # -------------------------
 # Cache & Temp
