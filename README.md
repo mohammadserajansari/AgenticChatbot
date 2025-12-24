@@ -80,12 +80,12 @@ http://127.0.0.1:8000/docs
 ```
 🔌 API Reference
 
-Document Upload
-POST /upload/
-Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
-Chat (RAG-enabled)
-POST /chat/
-JSON Example:
+- Document Upload
+- POST /upload/
+- Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
+- Chat (RAG-enabled)
+- POST /chat/
+- JSON Example:
 ```json
 {
   "message": "What are the core components of this system?"
