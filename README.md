@@ -38,10 +38,9 @@ AgenticChatbot/
 ## 🛠️ Setup & Run
 
 1. Clone the repository
-```
+```bash
 git clone https://github.com/mohammadserajansari/AgenticChatbot.git
 cd AgenticChatbot
-
 ```
 2. Create and activate Conda environment
 ```bash
@@ -70,20 +69,20 @@ sentence-transformers/all-MiniLM-L6-v2
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-
-6. Add your documents for RAG in 'data/' folder
-PDF, TXT, or Markdown files will be indexed automatically
-
-7. Run FastAPI server
+6. Run FastAPI server
 
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
-8. Access API docs in your browser
+7. Access API docs in your browser
 ```bash
 http://127.0.0.1:8000/docs
 ```
 🔌 API Reference
+
+Document Upload
+POST /upload/
+Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
 Chat (RAG-enabled)
 POST /chat/
 JSON Example:
@@ -94,11 +93,7 @@ JSON Example:
 ```
 Returns real-time streaming response from the local LLM using retrieved context.
 
-Document Upload
-POST /upload/
-Accepts multipart/form-data. Triggers automatic chunking and FAISS index update.
-
-9. 🐳 Docker Deployment
+8. 🐳 Docker Deployment
 \n Build Docker image
 ```bash
 docker build -t agentic-chatbot .
